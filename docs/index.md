@@ -28,3 +28,13 @@ import Header from './_header.md';
   而无需受困于各种复杂的技术和部署架构，也不用再面对那难以撼动的**屎山代码**
 
 让我们一起**滚蛋**吧！
+
+## 许可协议
+
+[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+## 捐助
+
+| 支付宝收款 | 微信收款 |
+| -- | -- |
+| <img src="/img/donate/alipay.jpg" width="200px"/> | <img src="/img/donate/wechat.png" width="200px"/> |
