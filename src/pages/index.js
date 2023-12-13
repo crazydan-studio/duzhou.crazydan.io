@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: i18n('先进的理论支撑'),
+    title: '先进的理论支撑',
     imageUrl: '/img/home/advance.jpg',
     description: (
       <>
@@ -22,7 +22,7 @@ const features = [
     ),
   },
   {
-    title: i18n('丰富的组件生态'),
+    title: '丰富的组件生态',
     imageUrl: '/img/home/ecology.jpg',
     description: (
       <>
@@ -33,7 +33,7 @@ const features = [
     ),
   },
   {
-    title: i18n('不变的开发初心'),
+    title: '不变的开发初心',
     imageUrl: '/img/home/solution.jpg',
     description: (
       <>
@@ -53,7 +53,7 @@ function Feature({imageUrl, title, description}) {
           <img className={styles.featureImage} src={imgUrl} />
         </div>
       )}
-      <h3>{title}</h3>
+      <h3>{i18n(title)}</h3>
       <p>{description}</p>
     </div>
   );
