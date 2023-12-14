@@ -11,7 +11,10 @@ export default i18n()
   .trans(['博客'])
   .en('Blog')
   //
-  .trans(['开源代码'])
+  .trans(['市场'])
+  .en('Market')
+  //
+  .trans(['源代码'])
   .en('Open Source')
   //
   .trans(['滚蛋吧，开发君！'])

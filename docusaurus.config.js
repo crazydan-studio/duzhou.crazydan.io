@@ -37,21 +37,13 @@ module.exports = {
         },
         // ==============================
         {
-          type: 'dropdown',
-          label: 'v0.1.0',
+          type: 'docsVersionDropdown',
           position: 'right',
-          // 采用多实例文档机制挂载不同版本的文档
-          items: [
-            {
-              to: 'docs',
-              label: 'v0.1.0',
-              docId: 'docs'
-            }
-          ]
+          docsPluginId: 'default'
         },
         {
           type: 'dropdown',
-          label: '源码',
+          label: '源代码',
           position: 'right',
           items: [
             {
@@ -129,21 +121,35 @@ module.exports = {
   },
   clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
   plugins: [
+    'plugin-image-zoom',
+    // https://docusaurus.io/docs/2.x/versioning
+    // 创建版本: yarn docusaurus docs:version x.y.z
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'docs',
+        id: 'default',
         routeBasePath: 'docs',
-        // 指向版本目录
-        path: 'docs/latest',
-        sidebarPath: require.resolve('./docs/latest/sidebars.js'),
+        path: 'docs',
+        sidebarPath: require.resolve('./docs/sidebars.js'),
         editUrl:
           'https://github.com/crazydan-studio/gundan.crazydan.io/edit/master',
         showLastUpdateAuthor: true,
-        showLastUpdateTime: true
+        showLastUpdateTime: true,
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'v0.1.0',
+            banner: 'unreleased'
+          }
+          // '2.1.0': {
+          //   label: 'v2.1.0'
+          // },
+          // '1.1.0': {
+          //   label: 'v1.1.0'
+          // },
+        }
       }
-    ],
-    'plugin-image-zoom'
+    ]
   ],
   presets: [
     [
