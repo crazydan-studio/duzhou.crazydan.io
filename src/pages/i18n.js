@@ -17,11 +17,11 @@ export default i18n()
   .trans(['源代码'])
   .en('Open Source')
   //
+  .trans(['渡舟平台'])
+  .en('Duzhou Platform')
+  //
   .trans(['致力于构建可演化的全功能型应用支撑平台'])
   .en('Building an evolvable full-featured application support platform')
-  //
-  .trans(['人人都可以是开发。'])
-  .en('Anybody can do it.')
   //
   .trans(['footer.copyright'])
   .zh(
