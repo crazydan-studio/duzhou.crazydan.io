@@ -15,7 +15,7 @@ import Header from './_header.md';
 
 基于[可逆计算](https://zhuanlan.zhihu.com/p/64004026)理论
 及其[框架代码](https://github.com/entropy-cloud/nop-entropy)搭建的
-全功能**应用装配平台**。
+全功能型**应用支撑平台**。
 
 将所有应用自顶向下进行分解，然后从中提取出具备完整业务功能的可复用**部件**（Parts），
 再把这些不同功能的部件进行**再装配**，进而便可快速搭建起一个能够满足各类业务需求的应用系统。
@@ -37,7 +37,7 @@ import Header from './_header.md';
 
 ## 捐助
 
-**注**：捐助请添加备注信息`滚蛋平台`。
+**注**：捐助请添加备注信息`渡舟平台`。
 
 捐助信息请查看：[捐助列表](/docs/donates)
 

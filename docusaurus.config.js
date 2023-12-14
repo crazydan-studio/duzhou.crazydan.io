@@ -1,20 +1,20 @@
 module.exports = {
-  title: '滚蛋吧，开发君！',
-  tagline: '人人都可以是开发。',
-  url: 'https://gundan.crazydan.io',
+  title: '渡舟平台',
+  tagline: '致力于构建可演化的全功能型应用支撑平台',
+  url: 'https://duzhou.crazydan.io',
   baseUrl: '/',
   favicon: 'img/logo.svg',
   organizationName: 'Crazydan Studio',
-  projectName: 'gundan.crazydan.io',
+  projectName: 'duzhou.crazydan.io',
   i18n: {
     defaultLocale: 'zh',
     locales: ['zh', 'en']
   },
   themeConfig: {
     navbar: {
-      title: '滚蛋',
+      title: '渡舟',
       logo: {
-        alt: '滚蛋',
+        alt: '渡舟平台',
         src: 'img/logo.svg'
       },
       items: [
@@ -25,7 +25,7 @@ module.exports = {
           position: 'left'
         },
         {
-          href: 'https://market.gundan.crazydan.io',
+          href: 'https://market.duzhou.crazydan.io',
           label: '市场',
           position: 'left'
         },
@@ -47,7 +47,7 @@ module.exports = {
           position: 'right',
           items: [
             {
-              href: 'https://github.com/crazydan-studio/gundan',
+              href: 'https://github.com/crazydan-studio/duzhou',
               label: 'Github'
             }
           ]
@@ -109,7 +109,7 @@ module.exports = {
     // https://giscus.app/zh-CN
     // https://www.alanwang.site/posts/blog-guides/docusaurus-comment
     giscus: {
-      repo: 'crazydan-studio/gundan.crazydan.io',
+      repo: 'crazydan-studio/duzhou.crazydan.io',
       repoId: 'R_kgDOK5E9Wg',
       category: 'Announcements',
       categoryId: 'DIC_kwDOK5E9Ws4Cbsjr'
@@ -132,7 +132,7 @@ module.exports = {
         path: 'docs',
         sidebarPath: require.resolve('./docs/sidebars.js'),
         editUrl:
-          'https://github.com/crazydan-studio/gundan.crazydan.io/edit/master',
+          'https://github.com/crazydan-studio/duzhou.crazydan.io/edit/master',
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         lastVersion: 'current',

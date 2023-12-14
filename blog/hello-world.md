@@ -10,7 +10,7 @@ tags:
 import Copyright from '@site/src/components/Copyright/OwnBlogByAuthor';
 
 
-2023 年 12 月 13 日，面向二次开发的全功能开发平台——**滚蛋**正式进入设计与开发阶段，
+2023 年 12 月 13 日，全功能型应用支撑平台 —— **渡舟** 正式进入设计与开发阶段，
 期待最终与你见面的那一天。
 
 

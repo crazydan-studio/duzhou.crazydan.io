@@ -17,8 +17,8 @@ export default i18n()
   .trans(['源代码'])
   .en('Open Source')
   //
-  .trans(['滚蛋吧，开发君！'])
-  .en('Let\'s go, Software Engineer!')
+  .trans(['致力于构建可演化的全功能型应用支撑平台'])
+  .en('Building an evolvable full-featured application support platform')
   //
   .trans(['人人都可以是开发。'])
   .en('Anybody can do it.')
