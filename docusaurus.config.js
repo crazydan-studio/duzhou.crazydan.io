@@ -19,26 +19,39 @@ module.exports = {
       },
       items: [
         {
-          to: 'blog/',
-          activeBasePath: 'blog',
-          label: '博客',
-          position: 'right'
-        },
-        {
           to: 'docs/',
           activeBasePath: 'docs',
           label: '文档',
-          position: 'right'
+          position: 'left'
         },
-        // {
-        //   to: 'docs/',
-        //   activeBasePath: 'docs',
-        //   label: '定价',
-        //   position: 'right'
-        // },
+        {
+          href: 'https://market.gundan.crazydan.io',
+          label: '市场',
+          position: 'left'
+        },
+        {
+          to: 'blog/',
+          activeBasePath: 'blog',
+          label: '博客',
+          position: 'left'
+        },
+        // ==============================
         {
           type: 'dropdown',
-          label: '开源代码',
+          label: 'v0.1.0',
+          position: 'right',
+          // 采用多实例文档机制挂载不同版本的文档
+          items: [
+            {
+              to: 'docs',
+              label: 'v0.1.0',
+              docId: 'docs'
+            }
+          ]
+        },
+        {
+          type: 'dropdown',
+          label: '源码',
           position: 'right',
           items: [
             {
@@ -85,7 +98,7 @@ module.exports = {
         {
           title: '更多',
           items: []
-        },
+        }
       ],
       copyright: 'footer.copyright'
     },
@@ -120,9 +133,10 @@ module.exports = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'docs',
-        path: 'docs',
         routeBasePath: 'docs',
-        sidebarPath: require.resolve('./docs/sidebars.js'),
+        // 指向版本目录
+        path: 'docs/latest',
+        sidebarPath: require.resolve('./docs/latest/sidebars.js'),
         editUrl:
           'https://github.com/crazydan-studio/gundan.crazydan.io/edit/master',
         showLastUpdateAuthor: true,
