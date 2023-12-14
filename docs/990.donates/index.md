@@ -1,6 +1,6 @@
 ---
-title: 捐助列表
-description: 平台捐助人列表
+title: 捐助清单
+description: 平台捐助人清单列表
 disable_comments: true
 custom_edit_url:
 ---
