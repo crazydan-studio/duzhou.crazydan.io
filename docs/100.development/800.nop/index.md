@@ -20,3 +20,12 @@ import Header from '../../_header.md';
 JAVA_HOME=/usr/lib/jvm/java-17-openjdk/ \
 mvn clean install -DskipTests -Dquarkus.package.type=uber-jar
 ```
+
+> 以上命令也是为了便于拉取 Maven 依赖包，避免 IDEA 下载依赖出现问题。
+
+在 IDEA 导入项目后，需调整项目配置（File -> Project Structure...）：
+
+![](./img/idea-project-settings.png)
+
+> 确保 IDEA 的 Maven 配置（File -> Settings -> Build, Execution, Deployment -> Maven -> Local repository）
+> 指向了与 `mvn` 命令相同的仓库路径。
