@@ -1,6 +1,6 @@
 module.exports = {
   title: '渡舟平台',
-  tagline: '致力于构建可演化的全功能型应用支撑平台',
+  tagline: '致力于构建可演化的全功能型应用生产平台',
   url: 'https://duzhou.crazydan.io',
   baseUrl: '/',
   favicon: 'img/logo.svg',

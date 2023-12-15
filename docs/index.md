@@ -13,9 +13,9 @@ import Header from './_header.md';
 
 ## 简介
 
-基于[可逆计算](https://zhuanlan.zhihu.com/p/64004026)理论
-及其[框架代码](https://github.com/entropy-cloud/nop-entropy)搭建的
-全功能型**应用支撑平台**。
+基于 [可逆计算](https://zhuanlan.zhihu.com/p/64004026) 理论及其
+[框架代码](https://github.com/entropy-cloud/nop-entropy)
+搭建的全功能型**应用生产平台**。
 
 当前软件开发的生态环境主要围绕着组件和代码级别的复用而展开设计和实现，
 但在实际的项目开发中，我们往往需要的是能够根据业务需求快速地开发出应用的各个功能模块，
@@ -30,7 +30,7 @@ import Header from './_header.md';
 本平台所要实现的目标就是为以上**应用生产模式**提供从 <u>设计、开发、部署、运行、更新到下线</u>
 的完整的应用系统生命周期支持。
 
-同时，本平台将推动和发展[部件市场](https://market.duzhou.crazydan.io)，
+同时，本平台将推动和发展 [部件市场](https://market.duzhou.crazydan.io)，
 以形成良好且繁荣的部件生态圈，从而实现开发者和业务需求方的互利共赢。
 
 ## 许可协议
@@ -44,9 +44,9 @@ import Header from './_header.md';
 
 ## 捐助
 
-**注**：捐助请添加备注信息`渡舟平台`。
+**注**：捐助请添加备注信息 `渡舟平台`。
 
-详细的捐助清单请查看[这里](/docs/donates)。
+详细的捐助清单请查看 [这里](/docs/donates)。
 
 | 支付宝收款 | 微信收款 |
 | -- | -- |
