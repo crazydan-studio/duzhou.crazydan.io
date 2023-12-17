@@ -1,5 +1,5 @@
 ---
-title: NOP 平台相关
+title: NOP 平台
 description: 与 NOP 平台相关的使用与集成等方面的知识点
 authors:
 - flytreleft
