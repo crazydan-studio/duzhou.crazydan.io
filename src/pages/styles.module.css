@@ -11,8 +11,8 @@
   position: relative;
   overflow: hidden;
   background-attachment: fixed;
-  background-position: top;
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url(/img/bg.jpg);
   min-height: 40vh;
@@ -20,18 +20,17 @@
 
 .heroTitle {
   font-size: 4rem;
-  color: var(--ifm-color-white);
+  color: #0083a5;
 }
 
 .heroSubtitle {
   font-size: 2rem;
-  color: var(--ifm-color-white);
+  color: #0083a5;
 }
 
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
-    background-position: 0 3em;
   }
 
   .featureImage {
