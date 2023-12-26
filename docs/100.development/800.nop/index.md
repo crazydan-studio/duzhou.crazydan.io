@@ -44,15 +44,20 @@ mvn clean install -DskipTests -Dquarkus.package.type=uber-jar
 > 如，`nop.core.vfs.delta-layer-ids=base,hunan`
 > 表示先应用 `base` 再应用 `hunan`。
 
-- `*.xgen`：按照 NOP 的 VFS 路径生成模板代码
+- `*.xdef`：DSL 的 Schema 定义
+- `*.xlib`：[xpl](https://gitee.com/canonical-entropy/nop-entropy/blob/master/docs/dev-guide/xlang/xpl.md)
+  模板语言的函数库，用于将公共的**可执行逻辑**抽取并定义为一个 DSL 标签，以便于在 DSL 中复用执行逻辑
+- `*.xgen`：按照 NOP 的 `_vfs` 路径生成模板代码
   - 在使用 maven 打包功能时，会自动执行工程的 `precompile` 和 `postcompile` 目录下的 `*.xgen` 代码，
     其中 `precompile` 在 compile 阶段之前执行，执行环境可以访问所有依赖库，
     但是不能访问当前工程的类目录，而 `postcompile` 在 compile 阶段之后执行，
     可以访问已编译的类和资源文件
-- `*.xrun`：
-- `*.xlib`：
-- `*.xdef`：DSL 的 Schema 定义
+- `*.xrun`：`nop-codegen` 专用 DSL，用于按照模板生成代码和 Delta 文件
 - `*.xbiz`：对无代码开发模式的支持，可以在不修改 Java 源代码的情况下，
   在线增加、修改后台 GraphQL 模型中的 `Query/Mutation/DataLoader`，
   其内置了有限自动机模型，一些简单的状态迁移逻辑无需在 Java 中编程，通过配置即可完成
 - `*.xmeta`：用于定义模型的描述信息，据此可以自动实现对数据增删改查的全部逻辑
+
+- `_module`：空白文件，放在 `src/resources/_vfs/xxx/yyy/`（`appName` 为 `xxx-yyy`）
+  中用于标识当前包是否为一个 NOP 模块，若为模块，
+  则会自动加载其 `/_vfs/xxx/yyy/beans/` 目录下的 `app-*.beans.xml` 文件
