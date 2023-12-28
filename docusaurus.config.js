@@ -1,3 +1,5 @@
+const localPlantUML = require('@mstroppel/remark-local-plantuml');
+
 module.exports = {
   title: '渡舟平台',
   tagline: '致力于构建可演化的全功能型应用生产平台',
@@ -135,6 +137,8 @@ module.exports = {
           'https://github.com/crazydan-studio/duzhou.crazydan.io/edit/master',
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
+        // https://github.com/mstroppel/remark-local-plantuml/#integration
+        remarkPlugins: [localPlantUML],
         lastVersion: 'current',
         versions: {
           current: {
