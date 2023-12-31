@@ -117,8 +117,11 @@ module.exports = {
       categoryId: 'DIC_kwDOK5E9Ws4Cbsjr'
     },
     prism: {
+      theme: require('./src/theme/prism/prismLight'),
+      darkTheme: require('./src/theme/prism/prismDark'),
       // https://docusaurus.io/docs/markdown-features/code-blocks#supported-languages
-      additionalLanguages: ['elm', 'elixir', 'erlang']
+      // https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23
+      additionalLanguages: ['elm', 'elixir', 'erlang', 'bash', 'yaml']
     }
   },
   clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
@@ -169,6 +172,8 @@ module.exports = {
           include: ['*.md', '*.mdx'],
           postsPerPage: 10,
           showReadingTime: true,
+          // https://github.com/mstroppel/remark-local-plantuml/#integration
+          remarkPlugins: [localPlantUML],
           truncateMarker: /<!--\s*(more)\s*-->/,
           feedOptions: {
             type: 'all',
