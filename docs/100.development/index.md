@@ -7,5 +7,3 @@ custom_edit_url:
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
-
-

@@ -31,7 +31,7 @@ PLANTUML_JAR="$(basename "${PLANTUML_JAR_URL}")"
 VIZJS_JAR="$(basename "${VIZJS_JAR_URL}")"
 mkdir -p "${NODE_MODULES}/node-plantuml/vendor"
 pushd "${NODE_MODULES}/node-plantuml/vendor"
-    rm -f plantuml.jar vizjs.jar "${PLANTUML_JAR}" "${VIZJS_JAR}"
+    rm -f plantuml.jar vizjs.jar
 
     if [ ! -f "${PLANTUML_JAR}" ]; then
         curl --location --retry 10 "${PLANTUML_JAR_URL}" -o "${PLANTUML_JAR}"
@@ -42,6 +42,4 @@ pushd "${NODE_MODULES}/node-plantuml/vendor"
 
     ln -sf "${PLANTUML_JAR}" plantuml.jar
     ln -sf "${VIZJS_JAR}" vizjs.jar
-
-    ls -al
 popd
