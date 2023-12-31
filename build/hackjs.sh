@@ -34,12 +34,16 @@ pushd "${NODE_MODULES}/node-plantuml/vendor"
     rm -f plantuml.jar vizjs.jar
 
     if [ ! -f "${PLANTUML_JAR}" ]; then
-        curl "${PLANTUML_JAR_URL}" -o "${PLANTUML_JAR}"
+        curl --retry 10 --retry-all-errors "${PLANTUML_JAR_URL}" -o "${PLANTUML_JAR}"
+        # cp "${_DIR_}/plantuml/${PLANTUML_JAR}" .
     fi
     if [ ! -f "${VIZJS_JAR}" ]; then
-        curl "${VIZJS_JAR_URL}" -o "${VIZJS_JAR}"
+        curl --retry 10 --retry-all-errors "${VIZJS_JAR_URL}" -o "${VIZJS_JAR}"
+        # cp "${_DIR_}/plantuml/${VIZJS_JAR}" .
     fi
 
     ln -sf "${PLANTUML_JAR}" plantuml.jar
     ln -sf "${VIZJS_JAR}" vizjs.jar
+
+    ls -al
 popd
