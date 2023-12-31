@@ -31,6 +31,8 @@ PLANTUML_JAR="$(basename "${PLANTUML_JAR_URL}")"
 VIZJS_JAR="$(basename "${VIZJS_JAR_URL}")"
 mkdir -p "${NODE_MODULES}/node-plantuml/vendor"
 pushd "${NODE_MODULES}/node-plantuml/vendor"
+    rm -f plantuml.jar vizjs.jar
+
     if [ ! -f "${PLANTUML_JAR}" ]; then
         curl "${PLANTUML_JAR_URL}" -o "${PLANTUML_JAR}"
     fi
