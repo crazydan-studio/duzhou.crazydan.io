@@ -61,3 +61,17 @@ mvn clean install -DskipTests -Dquarkus.package.type=uber-jar
 - `_module`：空白文件，放在 `src/resources/_vfs/xxx/yyy/`（`appName` 为 `xxx-yyy`）
   中用于标识当前包是否为一个 Nop 模块，若为模块，
   则会自动加载其 `/_vfs/xxx/yyy/beans/` 目录下的 `app-*.beans.xml` 文件
+
+<!-- https://plantuml.com/object-diagram -->
+```plantuml
+object "xxx.page.yaml" as Page {
+
+}
+
+
+map "xxx.action-auth.xml" as ActionAuth {
+    site.resource.url => main.page.yaml
+}
+
+ActionAuth::site.resource.url --> Page: 访问该资源时向前端\n返回指定的页面
+```
