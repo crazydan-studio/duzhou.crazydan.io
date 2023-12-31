@@ -1,6 +1,6 @@
 ---
-title: NOP 平台
-description: 与 NOP 平台相关的使用与集成等方面的知识点
+title: Nop 平台
+description: 与 Nop 平台相关的使用与集成等方面的知识点
 authors:
   - flytreleft
 ---
@@ -47,7 +47,7 @@ mvn clean install -DskipTests -Dquarkus.package.type=uber-jar
 - `*.xdef`：DSL 的 Schema 定义
 - `*.xlib`：[xpl](https://gitee.com/canonical-entropy/nop-entropy/blob/master/docs/dev-guide/xlang/xpl.md)
   模板语言的函数库，用于将公共的**可执行逻辑**抽取并定义为一个 DSL 标签，以便于在 DSL 中复用执行逻辑
-- `*.xgen`：按照 NOP 的 `_vfs` 路径生成模板代码
+- `*.xgen`：按照 Nop 的 `_vfs` 路径生成模板代码
   - 在使用 maven 打包功能时，会自动执行工程的 `precompile` 和 `postcompile` 目录下的 `*.xgen` 代码，
     其中 `precompile` 在 compile 阶段之前执行，执行环境可以访问所有依赖库，
     但是不能访问当前工程的类目录，而 `postcompile` 在 compile 阶段之后执行，
@@ -59,5 +59,5 @@ mvn clean install -DskipTests -Dquarkus.package.type=uber-jar
 - `*.xmeta`：用于定义模型的描述信息，据此可以自动实现对数据增删改查的全部逻辑
 
 - `_module`：空白文件，放在 `src/resources/_vfs/xxx/yyy/`（`appName` 为 `xxx-yyy`）
-  中用于标识当前包是否为一个 NOP 模块，若为模块，
+  中用于标识当前包是否为一个 Nop 模块，若为模块，
   则会自动加载其 `/_vfs/xxx/yyy/beans/` 目录下的 `app-*.beans.xml` 文件
