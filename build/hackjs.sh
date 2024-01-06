@@ -43,3 +43,14 @@ pushd "${NODE_MODULES}/node-plantuml/vendor"
     ln -sf "${PLANTUML_JAR}" plantuml.jar
     ln -sf "${VIZJS_JAR}" vizjs.jar
 popd
+
+FONT_URL='https://r2.fontsource.org/fonts/noto-sans-sc@latest/download.zip'
+mkdir "$HOME/.fonts"
+pushd "$HOME/.fonts"
+    if [ ! -f "noto-sans-sc.zip" ]; then
+        curl --location --retry 10 "${FONT_URL}" -o "noto-sans-sc.zip"
+        unzip noto-sans-sc.zip
+    fi
+    ls -al
+    java -jar node_modules/node-plantuml/vendor/plantuml.jar -printfonts
+popd
