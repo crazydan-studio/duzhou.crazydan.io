@@ -44,13 +44,19 @@ pushd "${NODE_MODULES}/node-plantuml/vendor"
     ln -sf "${VIZJS_JAR}" vizjs.jar
 popd
 
+# 在 Netlify 中构建时，需本地安装 Noto 字体
+## https://fontsource.org/fonts/noto-sans-sc
 FONT_URL='https://r2.fontsource.org/fonts/noto-sans-sc@latest/download.zip'
-mkdir "$HOME/.fonts"
-pushd "$HOME/.fonts"
-    if [ ! -f "noto-sans-sc.zip" ]; then
-        curl --location --retry 10 "${FONT_URL}" -o "noto-sans-sc.zip"
-        unzip noto-sans-sc.zip
-    fi
-    ls -al
-    java -jar "${NODE_MODULES}/node-plantuml/vendor/plantuml.jar" -printfonts
-popd
+if [ "$HOME" = "/opt/buildhome" ]; then
+    mkdir -p "${NODE_MODULES}/fonts"
+    rm -rf "$HOME/.fonts"
+    ln -sf "${NODE_MODULES}/fonts" "$HOME/.fonts"
+    pushd "$HOME/.fonts"
+        if [ ! -f "noto-sans-sc.zip" ]; then
+            curl --location --retry 10 "${FONT_URL}" -o "noto-sans-sc.zip"
+            unzip noto-sans-sc.zip
+        fi
+        ls -al
+        java -jar "${NODE_MODULES}/node-plantuml/vendor/plantuml.jar" -printfonts
+    popd
+fi
