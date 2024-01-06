@@ -52,5 +52,5 @@ pushd "$HOME/.fonts"
         unzip noto-sans-sc.zip
     fi
     ls -al
-    java -jar node_modules/node-plantuml/vendor/plantuml.jar -printfonts
+    java -jar "${NODE_MODULES}/node-plantuml/vendor/plantuml.jar" -printfonts
 popd
