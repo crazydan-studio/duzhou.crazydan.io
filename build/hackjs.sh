@@ -51,12 +51,12 @@ if [ "$HOME" = "/opt/buildhome" ]; then
     mkdir -p "${NODE_MODULES}/fonts"
     rm -rf "$HOME/.fonts"
     ln -sf "${NODE_MODULES}/fonts" "$HOME/.fonts"
+    cp "${_DIR_}/fonts/fonts.conf" "$HOME/.fonts.conf"
+
     pushd "$HOME/.fonts"
         if [ ! -f "noto-sans-sc.zip" ]; then
             curl --location --retry 10 "${FONT_URL}" -o "noto-sans-sc.zip"
             unzip noto-sans-sc.zip
         fi
-        ls -al
-        java -jar "${NODE_MODULES}/node-plantuml/vendor/plantuml.jar" -printfonts
     popd
 fi
