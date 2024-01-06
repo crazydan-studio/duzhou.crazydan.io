@@ -49,7 +49,7 @@ popd
 FONT_URL='https://r2.fontsource.org/fonts/noto-sans-sc@latest/download.zip'
 if [ "$HOME" = "/opt/buildhome" ]; then
     mkdir -p "${NODE_MODULES}/fonts"
-    rm -rf "$HOME/.fonts"
+    rm -f "$HOME/.fonts"
     ln -sf "${NODE_MODULES}/fonts" "$HOME/.fonts"
     cp "${_DIR_}/fonts/fonts.conf" "$HOME/.fonts.conf"
 
