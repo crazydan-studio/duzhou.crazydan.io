@@ -46,8 +46,9 @@ code {
 }
 
 .plantuml-diagram {
-  overflow: auto;
+  overflow-x: auto;
   scrollbar-width: thin;
+  margin-bottom: var(--ifm-leading);
 }
 
 .medium-zoom-overlay,
