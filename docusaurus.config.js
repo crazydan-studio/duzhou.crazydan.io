@@ -1,4 +1,6 @@
 const localPlantUML = require('@mstroppel/remark-local-plantuml');
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 module.exports = {
   title: '渡舟平台',
@@ -121,10 +123,16 @@ module.exports = {
       darkTheme: require('./src/theme/prism/prismDark'),
       // https://docusaurus.io/docs/markdown-features/code-blocks#supported-languages
       // https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23
-      additionalLanguages: ['elm', 'elixir', 'erlang', 'bash', 'yaml', 'java']
+      additionalLanguages: ['elm', 'elixir', 'erlang', 'bash', 'yaml', 'java', 'latex']
     }
   },
   clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
+  stylesheets: [
+    {
+      href: '/katex/katex.min.css',
+      type: 'text/css'
+    }
+  ],
   plugins: [
     'plugin-image-zoom',
     // https://docusaurus.io/docs/2.x/versioning
@@ -141,7 +149,9 @@ module.exports = {
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         // https://github.com/mstroppel/remark-local-plantuml/#integration
-        remarkPlugins: [localPlantUML],
+        remarkPlugins: [localPlantUML, math],
+        // https://docusaurus.io/docs/2.x/markdown-features/math-equations#configuration
+        rehypePlugins: [katex],
         lastVersion: 'current',
         versions: {
           current: {
@@ -173,7 +183,9 @@ module.exports = {
           postsPerPage: 10,
           showReadingTime: true,
           // https://github.com/mstroppel/remark-local-plantuml/#integration
-          remarkPlugins: [localPlantUML],
+          remarkPlugins: [localPlantUML, math],
+          // https://docusaurus.io/docs/2.x/markdown-features/math-equations#configuration
+          rehypePlugins: [katex],
           truncateMarker: /<!--\s*(more)\s*-->/,
           feedOptions: {
             type: 'all',
