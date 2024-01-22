@@ -45,6 +45,10 @@ code {
   padding-right: 0.3em;
 }
 
+.plantuml-diagram {
+  overflow: auto;
+  scrollbar-width: thin;
+}
 
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
