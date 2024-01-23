@@ -1,5 +1,5 @@
 ---
-title: 部件开发指南
+title: Nop 平台实践
 disable_comments: true
 custom_edit_url:
 ---
