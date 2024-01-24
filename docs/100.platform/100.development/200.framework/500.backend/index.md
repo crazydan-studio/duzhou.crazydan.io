@@ -22,7 +22,7 @@ import DocCardList from '@theme/DocCardList';
 ***: Data (duzhou-data-auth)
   : 控制用户对数据的访问和操作;
 
-**: Organization (duzhou-orgination)
+**: Organization (duzhou-organization)
   : 人员与组织;
 @endwbs
 ```
