@@ -20,17 +20,17 @@ export default i18n()
   .trans(['渡舟平台'])
   .en('Duzhou Platform')
   //
-  .trans(['致力于构建可演化的全功能型应用生产平台'])
-  .en('Building an evolvable full-featured application creation platform')
+  .trans(['致力于构建自运维、自监控、可演化的全功能型应用平台'])
+  .en('Building a self-operating, self-monitoring, and evolvable full-featured application platform')
   //
   .trans(['footer.copyright'])
   .zh(
     () =>
-      `版权所有 © 2023-${new Date().getFullYear()} <a href="https://studio.crazydan.org">Crazydan Studio</a><br>本站通过 <a href="https://v2.docusaurus.io/">Docusaurus 2</a> 构建`
+      `版权所有 © 2023 <a href="https://studio.crazydan.org">Crazydan Studio</a><br>本站通过 <a href="https://v2.docusaurus.io/">Docusaurus 2</a> 构建`
   )
   .en(
     () =>
-      `Copyright © 2023-${new Date().getFullYear()} <a href="https://studio.crazydan.org">Crazydan Studio</a><br>Build with <a href="https://v2.docusaurus.io/">Docusaurus 2</a>`
+      `Copyright © 2023 <a href="https://studio.crazydan.org">Crazydan Studio</a><br>Build with <a href="https://v2.docusaurus.io/">Docusaurus 2</a>`
   )
   //
   .trans(['我们'])
