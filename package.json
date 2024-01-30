@@ -12,6 +12,7 @@
   "dependencies": {
     "@docusaurus/core": "^2.3.1",
     "@docusaurus/preset-classic": "^2.3.1",
+    "@easyops-cn/docusaurus-search-local": "^0.40.1",
     "@giscus/react": "^2.2.8",
     "@mdx-js/react": "^1.5.8",
     "@mstroppel/remark-local-plantuml": "^0.0.1",

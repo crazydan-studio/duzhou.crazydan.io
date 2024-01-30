@@ -123,7 +123,15 @@ module.exports = {
       darkTheme: require('./src/theme/prism/prismDark'),
       // https://docusaurus.io/docs/markdown-features/code-blocks#supported-languages
       // https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23
-      additionalLanguages: ['elm', 'elixir', 'erlang', 'bash', 'yaml', 'java', 'latex']
+      additionalLanguages: [
+        'elm',
+        'elixir',
+        'erlang',
+        'bash',
+        'yaml',
+        'java',
+        'latex'
+      ]
     }
   },
   clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
@@ -194,6 +202,16 @@ module.exports = {
         },
         docs: false
       }
+    ]
+  ],
+  themes: [
+    // https://github.com/easyops-cn/docusaurus-search-local?tab=readme-ov-file#usage
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      ({
+        hashed: true,
+        language: ['en', 'zh']
+      })
     ]
   ]
 };
