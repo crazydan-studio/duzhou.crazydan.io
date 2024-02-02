@@ -3,7 +3,7 @@ title: 部件
 description: 部件的概念
 ---
 
-import Header from '../../_header.md';
+import Header from '@site/docs/\_header.md';
 
 <Header />
 
