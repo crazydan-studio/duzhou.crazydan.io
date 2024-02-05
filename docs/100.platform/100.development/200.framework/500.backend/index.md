@@ -7,11 +7,15 @@ custom_edit_url:
 
 import DocCardList from '@theme/DocCardList';
 
-<!-- https://plantuml.com/wbs-diagram -->
+<!-- https://plantuml.com/mindmap-diagram -->
 
 ```plantuml
-@startwbs
+@startmindmap
 * Framework (framework)
+
+**: [[./schema Schema ( schema )]]
+  : 定义所有的 XDef 元模型（定义层），
+    其余项目通过 XDSL 描述业务逻辑并提供实现（实现层）;
 
 **: [[./gateway Gateway ( gateway )]]
   : 服务网关;
@@ -35,7 +39,7 @@ import DocCardList from '@theme/DocCardList';
 
 **: Organization (organization)
   : 人员与组织;
-@endwbs
+@endmindmap
 ```
 
 > Maven 工程模块目录添加数字前缀以控制目录顺序，
