@@ -13,7 +13,7 @@ import DocCardList from '@theme/DocCardList';
 @startmindmap
 * Framework (framework)
 
-**: [[./schema Schema ( schema )]]
+**: [[Schema ( schema )]]
   : 定义所有的 XDef 元模型（定义层），
     其余项目通过 XDSL 描述业务逻辑并提供实现（实现层）;
 
