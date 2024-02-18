@@ -13,31 +13,32 @@ import DocCardList from '@theme/DocCardList';
 @startmindmap
 * Framework (framework)
 
-**: Schema ( schema )
+**: Schema (schema)
   : 定义所有的 XDef 元模型（定义层），
     其余项目通过 XDSL 描述业务逻辑并提供实现（实现层）;
 
-**: Starter ( starter )
+**: Starter (starter)
   : 应用服务启动器核心代码;
 ***: Quarkus Starter (starter-quarkus)
    : 基于 Quarkus 的应用服务启动器：
-     统一初始化 Quarkus 和 Nop 运行环境；
-     以依赖包方式引入应用服务后，便可构建可执行的应用包；;
+     - 统一初始化 Quarkus 和 Nop 运行环境；
+     - 以依赖包方式引入应用服务后，便可构建可执行的应用包；;
 
-**: [[./gateway Gateway ( gateway )]]
+**: [[./gateway Gateway (gateway)]]
   : 应用服务网关;
 ***: Starter (gateway-starter)
-   : 应用服务网关的启动器;
+   : 应用服务网关的启动器，
+     以外部依赖方式集成 Api 和 Web 资源网关;
 ***: Api (gateway-api)
    : Api 路由处理;
 ***: Web (gateway-web)
    : Web 资源路由处理;
 
-**: [[./config Config Center ( config )]]
+**: [[./config Config Center (config)]]
   : 配置中心，
     统一管理、更新所有应用服务的配置数据;
 
-**: [[./auth Auth ( auth)]]
+**: [[./auth Auth (auth)]]
   : 认证与鉴权;
 ***: Core (auth-core)
    : 基础核心的公共代码;
