@@ -4,3 +4,9 @@ flytreleft:
   url: https://flytreeleft.org
   image_url: /img/avatar/flytreeleft.svg
   email: flytreeleft@crazydan.org
+canonical:
+  name: canonical
+  title: 可逆计算理论提出者
+  url: https://www.zhihu.com/people/canonical-entropy
+  image_url: /img/avatar/anonymous.svg
+  email: canonical_entropy@163.com
