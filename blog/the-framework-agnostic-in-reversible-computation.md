@@ -31,6 +31,8 @@ source={{
 有人试图反驳：那这种情况不还是制定一种内部标准，既然如此，我用 spring 的标准又有什么问题？
 关于这个问题的解答有点微妙，需要有一定的精细概念的分辨能力才能够理解，在这里我简单做一些概念辨析。
 
+<!-- more -->
+
 ## 最小化信息表达
 
 > framework agnosticism allows create technology solutions that are
