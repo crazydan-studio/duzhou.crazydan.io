@@ -38,6 +38,12 @@ import Header from '@site/docs/\_header.md';
 
 ## 目标与愿景
 
+### 开箱即用的应用开发与运行的基础设施
+
+### 可累积、可复用、可共享的领域知识
+
+### 为 AI 自动化提供决策依据
+
 ## 许可协议
 
 [LGPL 3.0](https://www.gnu.org/licenses/lgpl-3.0.txt)
