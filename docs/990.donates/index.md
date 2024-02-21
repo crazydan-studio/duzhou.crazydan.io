@@ -7,7 +7,23 @@ custom_edit_url:
 
 import {Table, TRow, TCol} from '@site/src/components/Table';
 
-> 当前共累积收到捐款：**210** RMB，**0** USD。
+<Table head={['支付宝', '微信支付']}>
+
+<TRow><TCol>
+
+<img src="/img/donate/alipay.jpg" style={{height: '100px'}}/>
+
+</TCol><TCol>
+
+<img src="/img/donate/wechat.png" style={{height: '100px'}}/>
+
+</TCol></TRow>
+
+</Table>
+
+> **注**：点击二维码可放大图片，捐助时请添加备注信息 `渡舟平台`。
+
+当前共累积收到捐款：**210** RMB，**0** USD。
 
 感谢以下朋友对本平台的捐助支持（排名不分先后）：
 
