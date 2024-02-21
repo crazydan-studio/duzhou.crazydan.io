@@ -1,6 +1,6 @@
 ---
 title: DSL 设计器
-description: 了解 DSL 设计器的技术实现
+description: 了解 DSL 设计器的设计与技术实现
 disable_comments: true
 custom_edit_url:
 ---
