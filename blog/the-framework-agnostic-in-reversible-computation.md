@@ -159,9 +159,15 @@ URL 访问路径以及 HTTP 方法等信息仅对 Web 框架有用，
 
 <!-- LaTeX 符号表: https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols -->
 $$
-A \cong B \Longrightarrow A = f(B),
-B = g(A) \Rightarrow f\circ g = I_A,
-g\circ f = I_B
+\begin{align}
+A &\cong B \\
+\Longrightarrow
+A &= f(B),
+B = g(A) \\
+&\Rightarrow
+f \circ g = I_A,
+g \circ f = I_B
+\end{align}
 $$
 
 同样的，当我们说到业务代码与框架无关的时候，并不意味着业务代码与任何框架都没有关系，
