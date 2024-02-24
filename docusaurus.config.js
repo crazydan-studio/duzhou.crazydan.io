@@ -76,7 +76,12 @@ module.exports = {
         },
         {
           title: '友情链接',
-          items: []
+          items: [
+            {
+              label: 'Reality World',
+              href: 'https://realityworld.com/zh/'
+            }
+          ]
         },
         {
           title: '可逆计算',
@@ -208,10 +213,10 @@ module.exports = {
     // https://github.com/easyops-cn/docusaurus-search-local?tab=readme-ov-file#usage
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
-      ({
+      {
         hashed: true,
         language: ['en', 'zh']
-      })
+      }
     ]
   ]
 };
