@@ -34,8 +34,12 @@ export function Task({ children, status, startDate, endDate }) {
   });
 
   return (
-    <tr>
-      <td>{renderStatus(status)}</td>
+    <tr className={status === 'discarded' ? clsx(styles.taskDiscarded) : ''}>
+      <td>
+        <span className={clsx(styles.taskStatus, styles[status])}>
+          {renderStatus(status)}
+        </span>
+      </td>
       <td>{startDate}</td>
       <td>{endDate}</td>
       <td className={clsx(styles.taskContent)}>{contents}</td>
@@ -49,7 +53,7 @@ export function Comment({ children }) {
 }
 
 function renderStatus(status) {
-  switch(status) {
+  switch (status) {
     case 'done':
       return i18n('已完成');
     case 'doing':
