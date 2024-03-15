@@ -39,6 +39,12 @@ module.exports = {
           label: '博客',
           position: 'left'
         },
+        {
+          to: 'docs/donates',
+          activeBasePath: 'docs/donates',
+          label: '捐助',
+          position: 'left'
+        },
         // ==============================
         {
           type: 'docsVersionDropdown',
