@@ -23,7 +23,7 @@ import {Table, TRow, TCol} from '@site/src/components/Table';
 
 > **注**：点击二维码可放大图片，捐助时请添加备注信息 `渡舟平台`。
 
-当前共累积收到捐款：**210** RMB，**0** USD。
+当前共累积收到捐款：**220** RMB，**0** USD。
 
 感谢以下朋友对本平台的捐助支持（排名不分先后）：
 
@@ -75,6 +75,30 @@ import {Table, TRow, TCol} from '@site/src/components/Table';
 </TCol><TCol>
 
 100 RMB
+
+</TCol><TCol>
+
+</TCol></TRow>
+
+<TRow><TCol>
+
+许\*冬
+
+</TCol><TCol>
+
+- 2024-03-19 15:20:25
+
+</TCol><TCol>
+
+- 微信转账 (收款单号: \*676233)
+
+</TCol><TCol>
+
+- 10 RMB
+
+</TCol><TCol>
+
+10 RMB
 
 </TCol><TCol>
 
