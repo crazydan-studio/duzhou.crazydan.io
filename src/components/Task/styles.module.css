@@ -24,6 +24,10 @@
   background-color: rgb(2, 132, 199);
 }
 
+.taskStatus.hold {
+  background-color: rgb(234, 179, 8);
+}
+
 .taskStatus.discarded {
   background-color: rgb(75, 85, 99);
 }

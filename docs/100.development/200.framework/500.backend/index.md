@@ -41,7 +41,14 @@ import DocCardList from '@theme/DocCardList';
 **: [[./auth Auth (auth)]]
   : 认证与鉴权;
 ***: Core (auth-core)
-   : 基础核心的公共代码;
+   : 基础核心的公共代码，
+     定义认证与权限控制的抽象模型;
+***: Gateway (auth-gateway)
+   : 在应用网关处控制所有请求的可访问性;
+***: Service (service-auth)
+   : 在各个服务内控制 Api 的可访问性，
+     以及对数据的可操作性，
+     控制相关的数据来源于共享的用户上下文;
 ***: Action (action-auth)
    : 控制用户对资源的访问和操作，
      并记录操作日志;

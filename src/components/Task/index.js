@@ -60,6 +60,8 @@ function renderStatus(status) {
       return i18n('进行中');
     case 'pending':
       return i18n('未开始');
+    case 'hold':
+      return i18n('已暂停');
     case 'discarded':
       return i18n('已取消');
   }
