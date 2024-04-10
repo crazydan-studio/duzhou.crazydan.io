@@ -4,20 +4,50 @@ import clsx from 'clsx';
 import i18n from './i18n';
 import styles from './styles.module.css';
 
-export function Tasks({ children }) {
+export function Tasks({ children, status }) {
+  let taskAllAmount = 0;
+  let taskDoneAmount = 0;
+
+  children.forEach(({ props: { status, mdxType } }) => {
+    if (mdxType === 'Task') {
+      if (status != 'discarded') {
+        taskAllAmount += 1;
+
+        if (status == 'done') {
+          taskDoneAmount += 1;
+        }
+      }
+    }
+  });
+
+  const progress = ((taskDoneAmount / taskAllAmount) * 100).toFixed(2) + '%';
+
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>{i18n('状态')}</th>
-          <th>{i18n('开始时间')}</th>
-          <th>{i18n('结束时间')}</th>
-          <th>{i18n('开发内容')}</th>
-          <th>{i18n('备注')}</th>
-        </tr>
-      </thead>
-      <tbody>{children}</tbody>
-    </table>
+    <div className={clsx(styles.taskTable, styles[status])}>
+      <div className={clsx(styles.tasksProgress)}>
+        <span>{i18n('开发总体进度：')}</span>
+        <div className={clsx(styles.progressBar)}>
+          <div className={clsx(styles.progress)} style={{ width: progress }} />
+          <div className={clsx(styles.label)}>{progress}</div>
+        </div>
+        <span>
+          {taskDoneAmount}/{taskAllAmount}
+        </span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>{i18n('状态')}</th>
+            <th>{i18n('开始时间')}</th>
+            <th>{i18n('结束时间')}</th>
+            <th>{i18n('开发内容')}</th>
+            <th>{i18n('备注')}</th>
+          </tr>
+        </thead>
+        <tbody>{children}</tbody>
+      </table>
+      <div className={clsx(styles.mask)}>{renderStatus(status)}</div>
+    </div>
   );
 }
 
