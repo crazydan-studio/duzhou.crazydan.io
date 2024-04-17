@@ -4,36 +4,31 @@ import clsx from 'clsx';
 import i18n from './i18n';
 import styles from './styles.module.css';
 
-export function Tasks({ children, status }) {
-  let taskAllAmount = 0;
-  let taskDoneAmount = 0;
+export function Todo({ children }) {
+  const progress = { all: 0, done: 0 };
+  children.forEach(({ props: { status, mdxType, children } }) => {
+    if (mdxType === 'Tasks' && status !== 'discarded') {
+      const pg = statsTasksProgress(children);
 
-  children.forEach(({ props: { status, mdxType } }) => {
-    if (mdxType === 'Task') {
-      if (status != 'discarded') {
-        taskAllAmount += 1;
-
-        if (status == 'done') {
-          taskDoneAmount += 1;
-        }
-      }
+      progress.all += pg.all;
+      progress.done += pg.done;
     }
   });
 
-  const progress = ((taskDoneAmount / taskAllAmount) * 100).toFixed(2) + '%';
+  return (
+    <>
+      <ProgressRender progress={progress} />
+      {children}
+    </>
+  );
+}
+
+export function Tasks({ children, status }) {
+  const progress = statsTasksProgress(children);
 
   return (
     <div className={clsx(styles.taskTable, styles[status])}>
-      <div className={clsx(styles.tasksProgress)}>
-        <span>{i18n('开发总体进度：')}</span>
-        <div className={clsx(styles.progressBar)}>
-          <div className={clsx(styles.progress)} style={{ width: progress }} />
-          <div className={clsx(styles.label)}>{progress}</div>
-        </div>
-        <span>
-          {taskDoneAmount}/{taskAllAmount}
-        </span>
-      </div>
+      <ProgressRender progress={progress} />
       <table>
         <thead>
           <tr>
@@ -80,6 +75,39 @@ export function Task({ children, status, startDate, endDate }) {
 
 export function Comment({ children }) {
   return children || '';
+}
+
+function ProgressRender({ progress }) {
+  const value = ((progress.done / progress.all) * 100).toFixed(2) + '%';
+
+  return (
+    <div className={clsx(styles.tasksProgress)}>
+      <span>{i18n('开发总体进度：')}</span>
+      <div className={clsx(styles.progressBar)}>
+        <div className={clsx(styles.progress)} style={{ width: value }} />
+        <div className={clsx(styles.label)}>{value}</div>
+      </div>
+      <span>
+        {progress.done}/{progress.all}
+      </span>
+    </div>
+  );
+}
+
+function statsTasksProgress(tasks) {
+  const progress = { all: 0, done: 0 };
+
+  tasks.forEach(({ props: { status, mdxType } }) => {
+    if (mdxType === 'Task' && status !== 'discarded') {
+      progress.all += 1;
+
+      if (status == 'done') {
+        progress.done += 1;
+      }
+    }
+  });
+
+  return progress;
 }
 
 function renderStatus(status) {
