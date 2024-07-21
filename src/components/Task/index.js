@@ -78,7 +78,8 @@ export function Comment({ children }) {
 }
 
 function ProgressRender({ progress }) {
-  const value = ((progress.done / progress.all) * 100).toFixed(2) + '%';
+  const percent = progress.all > 0 ? progress.done / progress.all : 0;
+  const value = (percent * 100).toFixed(2) + '%';
 
   return (
     <div className={clsx(styles.tasksProgress)}>
@@ -97,7 +98,7 @@ function ProgressRender({ progress }) {
 function statsTasksProgress(tasks) {
   const progress = { all: 0, done: 0 };
 
-  tasks.forEach(({ props: { status, mdxType } }) => {
+  [].concat(tasks).forEach(({ props: { status, mdxType } }) => {
     if (mdxType === 'Task' && status !== 'discarded') {
       progress.all += 1;
 
