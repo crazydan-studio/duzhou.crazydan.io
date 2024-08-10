@@ -11,11 +11,11 @@ import {Table, TRow, TCol} from '@site/src/components/Table';
 
 <TRow><TCol>
 
-<img src="/img/donate/alipay.jpg" style={{height: '100px'}}/>
+<img src="/img/donate/alipay.jpg" style={{height: '200px'}}/>
 
 </TCol><TCol>
 
-<img src="/img/donate/wechat.png" style={{height: '100px'}}/>
+<img src="/img/donate/wechat.png" style={{height: '200px'}}/>
 
 </TCol></TRow>
 
