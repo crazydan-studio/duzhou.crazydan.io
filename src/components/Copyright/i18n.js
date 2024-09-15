@@ -23,8 +23,8 @@ export default i18n()
   .trans(['译文作者'])
   .en('Translated By')
   //
-  .trans(['转载请注明来自'])
-  .en('Please indicate that it comes from ')
+  .trans(['转载或商用请注明来自'])
+  .en('Repost or commercial please indicate that it comes from ')
   //
   .trans(['渡舟平台'])
   .en('Duzhou Platform')
