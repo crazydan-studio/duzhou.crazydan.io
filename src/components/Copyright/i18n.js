@@ -5,11 +5,14 @@ export default i18n()
   .trans(['文章作者'])
   .en('Author')
   //
+  .trans(['文章链接'])
+  .en('URL')
+  //
   .trans(['版权声明'])
   .en('Copyright')
   //
   .trans(['原文链接'])
-  .en('Source Link')
+  .en('Source URL')
   //
   .trans(['原文作者'])
   .en('Source Author')
@@ -21,7 +24,10 @@ export default i18n()
   .en('Translated By')
   //
   .trans(['转载请注明来自'])
-  .en('Please indicate that it comes from')
+  .en('Please indicate that it comes from ')
+  //
+  .trans(['渡舟平台'])
+  .en('Duzhou Platform')
   //
   .trans(['本译文采用许可协议'])
   .en('This translation is licensed under')
@@ -35,10 +41,10 @@ export default i18n()
   .en('https://creativecommons.org/licenses/by-nc-sa/4.0/')
   //
   .trans(['本文章采用许可协议'])
-  .en('This post is licensed under')
+  .en('This post is licensed under a ')
   //
-  .trans(['署名 4.0 国际 (CC BY 4.0)'])
-  .en('Attribution 4.0 International (CC BY 4.0)')
+  .trans(['《署名 4.0 国际 (CC BY 4.0)》'])
+  .en('Attribution 4.0 International (CC BY 4.0) license')
   //
   .trans(['https://creativecommons.org/licenses/by/4.0/deed.zh'])
   .en('https://creativecommons.org/licenses/by/4.0/')
