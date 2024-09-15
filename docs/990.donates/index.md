@@ -1,6 +1,6 @@
 ---
-title: 捐助清单
-description: 平台捐助人清单列表
+title: 赞助清单
+description: 平台赞助人清单列表
 disable_comments: true
 custom_edit_url:
 ---
@@ -21,13 +21,13 @@ import {Table, TRow, TCol} from '@site/src/components/Table';
 
 </Table>
 
-> **注**：点击二维码可放大图片，捐助时请添加备注信息 `渡舟平台`。
+> **注**：点击二维码可放大图片，赞助时请添加备注信息 `渡舟平台`。
 
 当前共累积收到捐款：**220** RMB，**0** USD。
 
-感谢以下朋友对本平台的捐助支持（排名不分先后）：
+感谢以下朋友（个人信息已脱敏）对本平台的赞助支持（排名不分先后）：
 
-<Table head={['捐助人', '捐助日期', '捐助途径', '捐助金额', '累积金额', '备注']}>
+<Table head={['赞助人', '赞助日期', '赞助途径', '赞助金额', '累积金额', '备注']}>
 
 <TRow><TCol>
 
