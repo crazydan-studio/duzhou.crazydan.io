@@ -2,6 +2,13 @@ const localPlantUML = require('@mstroppel/remark-local-plantuml');
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
+const mdxPlugins = {
+  // https://github.com/mstroppel/remark-local-plantuml/#integration
+  remarkPlugins: [localPlantUML, math],
+  // https://docusaurus.io/docs/2.x/markdown-features/math-equations#configuration
+  rehypePlugins: [katex]
+};
+
 module.exports = {
   title: '渡舟平台',
   tagline: '致力于构建自运维、自监控、可演化的全功能型应用平台',
@@ -167,10 +174,7 @@ module.exports = {
           'https://github.com/crazydan-studio/duzhou.crazydan.io/edit/master',
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
-        // https://github.com/mstroppel/remark-local-plantuml/#integration
-        remarkPlugins: [localPlantUML, math],
-        // https://docusaurus.io/docs/2.x/markdown-features/math-equations#configuration
-        rehypePlugins: [katex],
+        ...mdxPlugins,
         lastVersion: 'current',
         versions: {
           current: {
@@ -201,10 +205,7 @@ module.exports = {
           include: ['*.md', '*.mdx'],
           postsPerPage: 10,
           showReadingTime: true,
-          // https://github.com/mstroppel/remark-local-plantuml/#integration
-          remarkPlugins: [localPlantUML, math],
-          // https://docusaurus.io/docs/2.x/markdown-features/math-equations#configuration
-          rehypePlugins: [katex],
+          ...mdxPlugins,
           truncateMarker: /<!--\s*(more)\s*-->/,
           feedOptions: {
             type: 'all',
