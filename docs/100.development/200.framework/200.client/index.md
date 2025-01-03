@@ -1,6 +1,6 @@
 ---
-title: 应用前端
-description: 了解应用前端的技术实现
+title: 应用客户端
+description: 了解应用客户端的技术实现
 disable_comments: true
 custom_edit_url:
 ---
