@@ -14,4 +14,12 @@ export default i18n()
       ' Please proceed with caution when reading!'
   )
   //
+  .trans(['warning.draft.content'])
+  .zh('本文还是草稿，只有本地开发可见，不会出现在发布环境中！')
+  .en(
+    'This article is a draft,' +
+      ' and it can only be read in development environment, ' +
+      ' it will not be published in release environment!'
+  )
+  //
   .done();

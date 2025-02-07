@@ -12,6 +12,10 @@ export default function () {
     <Admonition type="warning" title={i18n('warning.title')}>
       <span>{i18n('warning.content')}</span>
     </Admonition>
+  ) : frontMatter.draft ? (
+    <Admonition type="warning" title={i18n('warning.title')}>
+      <span>{i18n('warning.draft.content')}</span>
+    </Admonition>
   ) : (
     <></>
   );
