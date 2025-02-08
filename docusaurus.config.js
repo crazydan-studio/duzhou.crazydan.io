@@ -11,7 +11,7 @@ const mdxPlugins = {
 
 module.exports = {
   title: '渡舟平台',
-  tagline: '致力于构建自运维、自监控、可演化的全功能型应用平台',
+  tagline: '致力于构建自运维、自监控、可演化的应用生产平台',
   url: 'https://duzhou.crazydan.io',
   baseUrl: '/',
   favicon: 'img/logo.svg',

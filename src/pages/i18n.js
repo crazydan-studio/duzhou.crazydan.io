@@ -20,8 +20,8 @@ export default i18n()
   .trans(['渡舟平台'])
   .en('Duzhou Platform')
   //
-  .trans(['致力于构建自运维、自监控、可演化的全功能型应用平台'])
-  .en('Building a self-operating, self-monitoring, and evolvable full-featured application platform')
+  .trans(['致力于构建自运维、自监控、可演化的应用生产平台'])
+  .en('Building a self-operating, self-monitoring, and evolvable application production platform')
   //
   .trans(['footer.copyright'])
   .zh(
