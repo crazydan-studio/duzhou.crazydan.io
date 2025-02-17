@@ -1,3 +1,39 @@
-.tableColumn > * {
+@media (max-width: 997px) {
+  /** 避免表格宽度超出页面宽度 */
+  .table {
+    display: table !important;
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+
+.table {}
+
+.tableColumn>* {
   margin: 0;
+}
+
+.tableCellWithId {
+  word-break: break-all;
+  min-width: 120px;
+}
+
+.tableCellHashLink {
+  opacity: 1;
+}
+
+.tableRowDesc {
+  background-color: var(--ifm-table-stripe-background);
+}
+
+.tableCellDesc {
+  padding-left: calc(3 * var(--ifm-table-cell-padding));
+}
+
+.tableCellDesc>*:last-child {
+  margin-bottom: 0;
+}
+
+.tableCellDesc>div:last-child>*:last-child {
+  margin-bottom: 0;
 }
