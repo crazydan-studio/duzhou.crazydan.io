@@ -148,7 +148,10 @@ module.exports = {
         'bash',
         'yaml',
         'java',
-        'latex'
+        'latex',
+        'kotlin',
+        'log',
+        'mermaid'
       ]
     }
   },
