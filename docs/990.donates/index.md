@@ -23,11 +23,9 @@ import {Table, TRow, TCol} from '@site/src/components/Table';
 
 > **注**：点击二维码可放大图片，赞助时请添加备注信息 `渡舟平台`。
 
-当前共累积收到捐款：**220** RMB，**0** USD。
-
 感谢以下朋友（个人信息已脱敏）对本平台的赞助支持（排名不分先后）：
 
-<Table head={['赞助人', '赞助日期', '赞助途径', '赞助金额', '累积金额', '备注']}>
+<Table head={['赞助人', '赞助日期', '赞助途径', '备注']}>
 
 <TRow><TCol>
 
@@ -42,15 +40,6 @@ import {Table, TRow, TCol} from '@site/src/components/Table';
 
 - 微信支付 (收款单号: \*939088)
 - 微信红包 (收款单号: \*116164)
-
-</TCol><TCol>
-
-- 10 RMB
-- 100 RMB
-
-</TCol><TCol>
-
-110 RMB
 
 </TCol><TCol>
 
@@ -70,14 +59,6 @@ import {Table, TRow, TCol} from '@site/src/components/Table';
 
 </TCol><TCol>
 
-- 100 RMB
-
-</TCol><TCol>
-
-100 RMB
-
-</TCol><TCol>
-
 </TCol></TRow>
 
 <TRow><TCol>
@@ -91,14 +72,6 @@ import {Table, TRow, TCol} from '@site/src/components/Table';
 </TCol><TCol>
 
 - 微信转账 (收款单号: \*676233)
-
-</TCol><TCol>
-
-- 10 RMB
-
-</TCol><TCol>
-
-10 RMB
 
 </TCol><TCol>
 
